@@ -31,6 +31,10 @@ namespace FlightPlanner.Storage
             return _flights.SingleOrDefault(f => f.Id == id);
         }
 
+        public static List<Flight> GetFlightsList()
+        {
+            return _flights;
+        }
         public static void DeleteFlight(int id)
         {
             var flight = GetFlight(id);

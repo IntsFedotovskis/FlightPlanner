@@ -23,7 +23,7 @@ namespace FlightPlanner.Controllers
         {
             if (!FlightRequest.IsValid(request))
                 return BadRequest();
-            return Ok(new PageResult());
+            return Ok(PageResult.FindFLight(request));
         }
 
         [HttpGet]
